@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eka Benedict Josephine Fatubun — Portfolio DKV</title>
+
+    <!-- Google Fonts: Poppins untuk heading, Inter untuk body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR: Navigasi utama (sticky & transparan)
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo">Eka<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#portfolio">Karya</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION: Perkenalan utama
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Halo, saya <span class="accent">Eka Benedict Josephine Fatubun</span></h1>
+                    <p class="tagline">Realita dan Imajinasi</p>
+                    <p>Mahasiswa Desain Komunikasi Visual yang menggabungkan teknologi AI dan estetika visual untuk menciptakan karya yang bermakna.</p>
+                    <!-- Tombol smooth-scroll ke galeri -->
+                    <a href="#portfolio" class="btn">Lihat Karya</a>
+                </div>
+                <div class="fade-in">
+                    <!-- Foto profil placeholder: gradient circle dengan inisial -->
+                    <div class="profile-placeholder">EF</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION: Bio + animasi skill bar
+         ============================================ -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Tentang <span class="accent">Saya</span></h2>
+            <p class="section-subtitle fade-in">Kenali saya lebih dekat</p>
+
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <h3>Desainer, Fotografi, Illustrasi</h3>
+                <p>Halo! Saya Eka, mahasiswa Desain Komunikasi Visual yang memiliki antusiasme tinggi dalam mengeksplorasi berbagai jenis fotografi dan Ilustrasi. Namun saya juga menyukai tidur dan itu sering menjadi hambatan.</p>
+                <p>Saya yakin bisa mengatasi hambatan itu sehingga bisa fokus pada tujuan saya yaitu membuat karya-karya dengan menggabungkan realita dan imajinasi</p>
+                </div>
+
+                <!-- Skill bars dengan atribut data-percent -->
+                <div class="skills fade-in">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Fotografi</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Illustrasi</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Desain Grafis </span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Vektor</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PORTFOLIO SECTION: Filter + Grid karya
+         ============================================ -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">Galeri <span class="accent">Karya</span></h2>
+            <p class="section-subtitle fade-in">Kumpulan proyek yang pernah saya kerjakan</p>
+
+            <!-- Tombol filter kategori -->
+            <div class="filter-buttons fade-in">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="poster">Poster</button>
+                <button class="filter-btn" data-filter="fotografi">Fotografi</button>
+                <button class="filter-btn" data-filter="vektor">Vektor</button>
+                <button class="filter-btn" data-filter="ilustrasi">Ilustrasi</button>
+            </div>
+
+            <!--
+                GRID PORTFOLIO
+                ===============
+                PETUNJUK MEMASUKKAN GAMBAR:
+                1. Simpan file gambar di folder images/ (sejajar dengan folder css/ dan js/)
+                2. Ganti nilai src="images/karya-N.jpg" dengan path gambar Anda
+                3. Jika gambar belum ada, placeholder gradient akan ditampilkan otomatis
+                4. Atribut data-image digunakan untuk gambar resolusi tinggi di lightbox
+            -->
+            <div class="portfolio-grid">
+
+                <!-- KARYA 1: Ilustrasi -->
+                <div class="portfolio-item fade-in" data-category="Illustrasi"
+                     data-title="Illustrasi"
+                     data-desc="ilustrasi imajinasi tentang alam dan planet"
+                     data-image="images/illustrasi.jpg">
+                    <div class="portfolio-thumb-wrapper thumb-1">
+                        <img src="images/illustrasi.jpg" alt="Klasifikasi Gerakan Yospan"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display:none;">AI</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Ilustrasi</span>
+                        <h4>Keindahan alam, tumbuhan, dan planet</h4>
+                        <p>Ilustrasi Alam dan Planet</p>
+                    </div>
+                </div>
+
+                <!-- KARYA 2: Fotografi -->
+                <div class="portfolio-item fade-in" data-category="fotografi"
+                     data-title="Fotografi Moment"
+                     data-desc="Sebuah foto yang memperlihatkan aktivitas beberapa masyarakat setempat."
+                     data-image="images/fotografi.jpeg">
+                    <div class="portfolio-thumb-wrapper thumb-2">
+                        <img src="images/fotografi.jpeg" alt="Fotografi Moment"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display:none;">POS</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Fotografi</span>
+                        <h4>Fotografi Moment</h4>
+                        <p>Foto Aktifitas</p>
+                    </div>
+                </div>
+
+                <!-- KARYA 3: Branding  -->
+                <div class="portfolio-item fade-in" data-category="branding"
+                     data-title="Branding"
+                     data-desc="Desain cover majalah."
+                     data-image="images/cover makanan.jpg">
+                    <div class="portfolio-thumb-wrapper thumb-3">
+                        <img src="images/cover makanan.jpg" alt="Branding"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display:none;">ID</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Branding</span>
+                        <h4>Branding</h4>
+                        <p>Desain cover majalah</p>
+                    </div>
+                </div>
+
+ <!-- KARYA 4:  Poster  -->
+                <div class="portfolio-item fade-in" data-category="poster"
+                     data-title="Poster"
+                     data-desc="Desain poster film."
+                     data-image="images/poster.jpg">
+                    <div class="portfolio-thumb-wrapper thumb-3">
+                        <img src="images/poster.jpg" alt="Poster"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display:none;">ID</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Poster</span>
+                        <h4>Poster</h4>
+                        <p>Desain poster film tugas mata kuliah 
+                            komputer grafis</p>
+                    </div>
+                </div>
+
+                <!-- KARYA 5: Vektor -->
+                <div class="portfolio-item fade-in" data-category="vektor"
+                     data-title="Vektor"
+                     data-desc="Sebuah karya vektor wajah manusia."
+                     data-image="images/vektor.jpg">
+                    <div class="portfolio-thumb-wrapper thumb-4">
+                        <img src="images/vektor.jpg" alt="Vektor"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="portfolio-placeholder" style="display:none;">ART</div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Vektor</span>
+                        <h4>Vektor Wajah</h4>
+                        <p>wajah</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LIGHTBOX: Popup detail karya (awalnya tersembunyi)
+         ============================================ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image" id="lightboxImage"></div>
+            <div class="lightbox-body">
+                <h3 id="lightboxTitle">Judul Karya</h3>
+                <p id="lightboxDesc">Deskripsi karya akan muncul di sini.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         CONTACT SECTION: Form + Sosial Media
+         ============================================ -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Hubungi <span class="accent">Saya</span></h2>
+            <p class="section-subtitle fade-in">Tertarik berkolaborasi? Kirim pesan</p>
+
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Mari Terhubung</h3>
+                    <p>Saya terbuka untuk kesempatan berkolaborasi, diskusi proyek, atau sekadar berbagi pemikiran tentang desain dan AI.</p>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">@</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <span>eekafatubun@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">GH</a>
+                        <a href="#" aria-label="Twitter">X</a>
+                    </div>
+                </div>
+
+                <!-- Form dengan validasi via JS (bukan native HTML) -->
+                <form class="contact-form fade-in" id="contactForm" novalidate>
+                    <div class="form-group" id="nameGroup">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" placeholder="Nama lengkap Anda">
+                        <div class="error-message">Nama wajib diisi</div>
+                    </div>
+
+                    <div class="form-group" id="emailGroup">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="nama@email.com">
+                        <div class="error-message">Email tidak valid</div>
+                    </div>
+
+                    <div class="form-group" id="messageGroup">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" placeholder="Tulis pesan Anda..."></textarea>
+                        <div class="error-message">Pesan minimal 10 karakter</div>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Kirim Pesan</button>
+
+                    <div class="form-status" id="formStatus">
+                        Pesan berhasil dikirim! Terima kasih.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER: Copyright
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Eka Benedict Josephine Fatubun . Dibuat dengan <span class="accent">&#9829;</span> untuk dunia DKV.</p>
+        </div>
+    </footer>
+
+    <!-- Tombol scroll-to-top, muncul setelah scroll turun -->
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">&uarr;</button>
+
+    <!-- JavaScript Eksternal (di akhir body agar DOM sudah siap) -->
+    <script src="js/script.js"></script>
+</body>
+</html>
